@@ -3,7 +3,8 @@ import { configureStore } from "@reduxjs/toolkit";
 import reducer from "store/slices";
 
 const store = configureStore({
-  reducer,
+  reducer: reducer,
+  devTools: true,
 });
 
 if (module.hot) {

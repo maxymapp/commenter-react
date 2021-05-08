@@ -5,6 +5,10 @@ import { Provider } from "react-redux";
 import "index.css";
 import store from "store";
 import reportWebVitals from "reportWebVitals";
+import { fetchComments } from "./store/slices/commentsSlice";
+
+//fetch comment for initial state
+store.dispatch(fetchComments());
 
 const rootEl = document.getElementById("root");
 

@@ -1,9 +1,11 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
-import viewReducer, { name as viewName } from "store/slices/view";
+import viewReducer from "store/slices/view";
+import commentReducer from "store/slices/commentsSlice";
 
 const rootReducer = combineReducers({
-  [viewName]: viewReducer,
+  view: viewReducer,
+  comments: commentReducer,
 });
 
 export default rootReducer;

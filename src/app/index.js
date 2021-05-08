@@ -4,6 +4,8 @@ import "app/App.css";
 import logo from "app/logo.svg";
 import Header from "components/Header";
 import CommentModal from "components/CommentModal";
+import CommentsList from "components/CommentsList";
+import TopCommenters from "components/TopCommenters";
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </div>
+
+      <TopCommenters />
+
+      <CommentsList />
     </>
   );
 }
