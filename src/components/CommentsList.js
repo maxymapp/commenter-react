@@ -14,12 +14,6 @@ const CommentsList = () => {
   const comments = useSelector(selectAllComments);
   const commentsStatus = useSelector((state) => state.comments.status);
 
-  useEffect(() => {
-    if (commentsStatus === "idle") {
-      dispatch(fetchComments());
-    }
-  }, [commentsStatus, dispatch]);
-
   return (
     <Container fixed>
       <h3>Comments</h3>
