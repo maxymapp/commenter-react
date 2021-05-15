@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Container from "@material-ui/core/Container";
 import { selectAllComments } from "../store/slices/commentsSlice";
@@ -26,8 +26,12 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const TopCommenters = () => {
   const comments = useSelector(selectAllComments);
-  const topCommentersTrio = getTopCommentersTrio(comments);
+  const [topCommentersTrio, setTopCommentersTrio] = useState([]);
   const classes = useStyles();
+
+  useEffect(() => {
+    setTopCommentersTrio(getTopCommentersTrio(comments));
+  }, [comments]);
 
   return (
     <Container fixed>
