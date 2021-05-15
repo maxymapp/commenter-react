@@ -23,8 +23,9 @@ const render = () => {
       </Provider>
     </React.StrictMode>
   );
+  // const renderMethod = module.hot ? ReactDOM.render : ReactDOM.hydrate;
 
-  ReactDOM.hydrate(wrappedApp, rootEl);
+  ReactDOM.render(wrappedApp, rootEl);
 };
 
 render();
